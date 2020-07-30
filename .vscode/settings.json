@@ -1,0 +1,40 @@
+{
+    // Operator Mono
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 13,
+  "editor.lineHeight": 23,
+  "editor.fontLigatures": true,
+  "editor.letterSpacing": 0.2,
+  "files.trimTrailingWhitespace": true,
+  "editor.fontWeight": "400",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 4,
+  "window.zoomLevel": 0.1,
+  "synthwave84.disableGlow": true,
+  "synthwave84.brightness": "0.58",
+  "editor.cursorBlinking": "solid",
+  "bracket-pair-colorizer-2.colors": [
+      // "Orchid",
+      // "Black",
+      // "LightSkyBlue"
+      "Orchid",
+      "LightSkyBlue",
+      "Gold"
+  ],
+  "terminal.integrated.fontWeight": "400",
+  "bracket-pair-colorizer-2.activeScopeCSS": [
+      "borderStyle : bold",
+      "borderWidth : 4px",
+      "borderColor : {color}",
+      "opacity: 2.5"
+  ],
+  "workbench.colorCustomizations": {
+      "activityBar.background": "#fbfbfba0",
+      "activityBar.foreground": "#15170f",
+      "activityBar.border": "#0a86f3",
+      "titleBar.activeBackground": "#c21720",
+      "titleBar.activeForeground": "#F6FBFB",
+      "titleBar.border": "#0b31eb"
+  },
+  "editor.minimap.enabled": false
+}
