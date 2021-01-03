@@ -1,40 +1,84 @@
 {
-    // Operator Mono
-  "editor.fontFamily": "Fira Code",
-  "editor.fontSize": 13,
-  "editor.lineHeight": 23,
-  "editor.fontLigatures": true,
-  "editor.letterSpacing": 0.2,
-  "files.trimTrailingWhitespace": true,
-  "editor.fontWeight": "400",
-  "editor.cursorStyle": "line",
-  "editor.cursorWidth": 4,
-  "window.zoomLevel": 0.1,
-  "synthwave84.disableGlow": true,
-  "synthwave84.brightness": "0.58",
-  "editor.cursorBlinking": "solid",
-  "bracket-pair-colorizer-2.colors": [
-      // "Orchid",
-      // "Black",
-      // "LightSkyBlue"
-      "Orchid",
-      "LightSkyBlue",
-      "Gold"
-  ],
-  "terminal.integrated.fontWeight": "400",
-  "bracket-pair-colorizer-2.activeScopeCSS": [
-      "borderStyle : bold",
-      "borderWidth : 4px",
-      "borderColor : {color}",
-      "opacity: 2.5"
-  ],
-  "workbench.colorCustomizations": {
-      "activityBar.background": "#fbfbfba0",
-      "activityBar.foreground": "#15170f",
-      "activityBar.border": "#0a86f3",
-      "titleBar.activeBackground": "#c21720",
-      "titleBar.activeForeground": "#F6FBFB",
-      "titleBar.border": "#0b31eb"
-  },
-  "editor.minimap.enabled": false
+    //   "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.fontSize": 17,
+    "editor.fontWeight": "500",
+    "editor.detectIndentation": true,
+    // "editor.fontFamily": "'Inconsolata UltraCondensed'",
+    "editor.fontFamily": "'Inconsolata UltraCondensed'",
+    "editor.fontLigatures": false,
+    "editor.rulers": [
+        80
+    ],
+    "editor.snippetSuggestions": "top",
+    "editor.wordBasedSuggestions": false,
+    "editor.suggest.localityBonus": true,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.suggestSelection": "recentlyUsed",
+        "editor.suggest.showKeywords": false
+    },
+    "editor.cursorBlinking": "solid",
+    "editor.renderWhitespace": "boundary",
+    "files.exclude": {
+        "USE_GITIGNORE": true
+    },
+    "files.defaultLanguage": "{activeEditorLanguage}",
+    "javascript.validate.enable": false,
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/coverage": true,
+        "**/dist": true,
+        "**/build": true,
+        "**/.build": true,
+        "**/.gh-pages": true
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": false
+    },
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "eslint.options": {
+        "env": {
+            "browser": true,
+            "jest/globals": true,
+            "es6": true
+        },
+        "parserOptions": {
+            "ecmaVersion": 2019,
+            "sourceType": "module",
+            "ecmaFeatures": {
+                "jsx": true
+            }
+        },
+        "rules": {
+            "no-debugger": "off"
+        }
+    },
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#fbfbfba0",
+        "activityBar.foreground": "#15170f",
+        "activityBar.border": "#0a86f3",
+        "titleBar.activeBackground": "#c21720",
+        "titleBar.activeForeground": "#F6FBFB",
+        "titleBar.border": "#0b31eb"
+    },
+    "workbench.colorTheme": "Night Owl (No Italics)",
+    "workbench.iconTheme": "material-icon-theme",
+    "breadcrumbs.enabled": true,
+    "grunt.autoDetect": "off",
+    "gulp.autoDetect": "off",
+    "npm.runSilent": true,
+    "explorer.confirmDragAndDrop": false,
+    "editor.formatOnPaste": false,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.smoothScrolling": true,
+    "editor.minimap.enabled": false,
+    "php.suggest.basic": false
 }

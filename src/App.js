@@ -1,55 +1,34 @@
-import React, {Component} from 'react';
+import React, { useState } from "react";
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.bundle';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from './store';
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.bundle";
+import About from "./Components/Hooks/About";
+import Contact from "./Components/Hooks/Contact";
+import Home from "./Components/Hooks/Home";
+import Navbar from "./Components/Hooks/Layout/Navbar";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NotFound from "./Components/Hooks/Layout/NotFound";
+import AddUser from "./Components/Hooks/User/AddUser";
+import EditUser from "./Components/Hooks/User/Edituser";
+import { Provider } from "react-redux";
+import store from "./Components/Store/";
 
-import setAuthToken from './setAuthToken';
-import { setCurrentUser, logoutUser } from './actions/authentication';
-import {PrivateRoute} from './Private-Route/PrivateRoute';
-
-import Navbar from './Components/Navbar';
-import Login from './Components/Login';
-import Home from './Components/Home';
-
-if(localStorage) {
-  setAuthToken(localStorage);
-  const decoded = (localStorage);
-  store.dispatch(setCurrentUser(decoded));
-
-  const currentTime = Date.now() / 1000;
-  if(decoded.exp < currentTime) {
-    store.dispatch(logoutUser());
-    window.location.href = '/login'
-  }
-}
-
-
-class App extends Component {
-  constructor(props){
-    super(props);
-    }
-
-  render() {
-    return(
-      <Provider store = { store }>
-        <Router>
-            <div>
-              <Navbar />
-                {/* <Route exact path="/" component={ Home } /> */}
-                <div className="container">
-                  <Route exact path="/login" component={ Login } />
-                </div>
-                <Switch>
-                <PrivateRoute exact path="/home" component={Home} />
-                </Switch>
-            </div>
-          </Router>
-        </Provider>
-    )
-  }
-}
+const App = () => {
+  return (
+    <Provider store={store}>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/test" component={About} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/adduser" component={AddUser} />
+          <Route exact path="/edituser/:id" component={EditUser} />
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
+    </Provider>
+  );
+};
 
 export default App;

@@ -1,0 +1,303 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Century Gothic";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/century_gothic/centurygothic_n7.9c88796e9511a086b9c0038824e3fcaa4e104f7d.woff2?&hmac=3ed9b017b9784efe5d0ba5d3291b64cb547a095dc7e44ba45c6e39ad548a0606")
+      format("woff2"),
+    url("https://fonts.shopifycdn.com/century_gothic/centurygothic_n7.bfbdd76b5b769e73488b72ad922937634199bb91.woff?&hmac=c07f7f99e250620aa35b117d45ba709a301488bdb3d7954ff1549c3eec2f05a1")
+      format("woff");
+}
+
+body {
+  color: #545454;
+  background-color: #fff;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 0.95rem;
+}
+
+.index-product,
+.index-products {
+  background-color: #fff;
+}
+
+.productgrid {
+  display: flex;
+  flex-wrap: wrap;
+  border-left: 1px solid #efeeec;
+  padding-top: 1px;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: mandatory;
+  scroll-snap-destination: 0% 100%;
+  scroll-snap-points-x: repeat(100%);
+}
+.productgrid .flickitybutton:disabled {
+  opacity: 0;
+}
+@media only screen and (max-width: 749px) {
+  .productgridhorizontally {
+    position: relative;
+    display: block;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .productgridhorizontally .productitem {
+    min-width: 250px;
+  }
+  .productgridvertically .productitem {
+    width: 100%;
+  }
+}
+.flickitysliderdefault[dataarrowsstyle="dark"]
+  .flickityprevnextbutton
+  .flickitybuttonicon {
+  fill: #222;
+}
+
+.productitem {
+  position: relative;
+  border: 1px solid #efeeec;
+  border-left: 0;
+  background: #fff;
+  margin-top: -1px;
+  min-height: 100%;
+  scroll-snap-align: start;
+}
+.largeuponethird {
+  width: 33.33333%;
+}
+@media only screen and (min-width: 750px) and (max-width: 989px) {
+  .mediumonethird {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 749px) {
+  .smallonewhole {
+    width: 100%;
+  }
+}
+.productitemimage {
+  display: block;
+  padding-top: 120%;
+  height: 0;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #efeeec;
+}
+.productitemfeaturedimage .productitemimage {
+  padding: 0;
+  height: 100%;
+}
+
+.productitembg {
+  position: absolute;
+  display: block;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+}
+.lazyloaded .loader {
+  opacity: 0;
+  visibility: hidden;
+}
+.productitembgunder {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
+
+@-webkit-keyframes slideup {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px) rotate(10deg);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+  }
+  80% {
+    -webkit-transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0deg);
+  }
+}
+@-ms-keyframes slideup {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px) rotate(10deg);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+  }
+  80% {
+    -webkit-transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0deg);
+  }
+}
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px) rotate(10deg);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+  }
+  80% {
+    -webkit-transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0deg);
+  }
+}
+
+.productitembgunder {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.notouch .doubleimage .productitembgunder {
+  opacity: 0;
+}
+.notouch .doubleimage:hover .productitembgunder {
+  opacity: 1;
+}
+.touch .productitembgunder {
+  display: none;
+}
+
+.slideup {
+  position: absolute;
+  bottom: -60px;
+  -webkit-transition: bottom 0.25s ease-in;
+  -moz-transition: bottom 0.25s ease-in;
+  -ms-transition: bottom 0.25s ease-in;
+  -o-transition: bottom 0.25s ease-in;
+  transition: bottom 0.25s ease-in;
+  z-index: 9;
+  width: 100%;
+  background: #efeeec;
+  opacity: 0.8;
+  border-top: 1px solid #efeeec;
+}
+.productitemimage .slideup {
+  position: absolute;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.2s ease-in-out, bottom 0.2s ease-in-out;
+}
+.productitemimage .slideup span:hover {
+  color: inherit;
+}
+.productitemimage:hover .slideup {
+  bottom: 0px;
+  opacity: 0.9;
+}
+.no-touch .slideup.up {
+  bottom: 0;
+}
+.slideup span {
+  text-decoration: none;
+  display: block;
+  color: #545454;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 990px) {
+  .largeuponethird {
+    width: 33.33333%;
+  }
+}
+
+.notouch .doubleimage .productitembgunder {
+  opacity: 0;
+}
+.notouch .doubleimage:hover .productitembgunder {
+  opacity: 1;
+}
+
+.productinformation {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+@media only screen and (max-width: 749px) {
+  .productinformation {
+    padding: 12px;
+  }
+}
+
+.productinformation .productgridtitle {
+  font-weight: normal;
+  font-size: 14.4px;
+  line-height: 1.4;
+  margin: 7px 0;
+}
+@media only screen and (max-width: 749px) {
+  .productinformation .productgridtitle {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+.lookcontent .productinformation .productgridtitle {
+  font-size: 12.8px;
+  margin: 0 0 5px 0;
+}
+.productinformation .productgridtitle {
+  font-weight: normal;
+  font-size: 14.4px;
+  line-height: 1.4;
+  margin: 7px 0;
+}
+@media only screen and (max-width: 749px) {
+  .productinformation .productgridtitle {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+.lookcontent .productinformation .price {
+  font-size: 12.35px;
+}
+.productinformation .price {
+  font-size: 14px;
+  opacity: 0.7;
+}
+@media only screen and (max-width: 749px) {
+  .productinformation .price {
+    font-size: 9.6px;
+  }
+}
